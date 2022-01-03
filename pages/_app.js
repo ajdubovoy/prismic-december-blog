@@ -1,6 +1,7 @@
 // pages/_app.js
 import Head from 'next/head'
 import SkipLink from '../components/SkipLink'
+import Navbar from '../components/Navbar'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     <SkipLink />
 		
 		<header>
-			<p>Navbar coming soon!</p>
+      <Navbar />
     </header>
 		
 		<main id="main">

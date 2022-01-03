@@ -1,16 +1,32 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+*:focus { 
+	/* some exciting button focus styles */ 
+  outline: 0.1em #AA2B2B solid;
+  outline-offset: 0.1rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+*:focus:not(:focus-visible) {
+ /* undo all the above focused button styles */
+  outline: 0;
+  outline-offset: 0.25rem;
 }
 
-* {
-  box-sizing: border-box;
+*:focus-visible { 
+ /* some even *more* exciting button focus styles */
+  outline: 0.25em #AA2B2B dashed;
+  outline-offset: 0.25rem;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.visually-hidden, .sr-only {
+  /* hides content except when viewed by screen readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
