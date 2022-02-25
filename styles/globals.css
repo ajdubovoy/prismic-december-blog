@@ -34,3 +34,19 @@ ul[role="list"], ol[role="list"] {
 p {
   max-width: 60ch;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    /* turns off smooth-scrolling behavior (if turned on) when prefers reduced motion */
+    scroll-behavior: auto;
+  }
+
+  *:not(.animates-without-motion),
+  *:not(.animates-without-motion)::before,
+  *:not(.animates-without-motion)::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
